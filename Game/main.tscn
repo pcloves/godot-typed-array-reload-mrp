@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="csharp://TypedArrayBug.Lib/TypedArrayBug.Lib.TaskRoot.cs" id="1_root"]
+[ext_resource type="Resource" path="res://main_task.tres" id="2_sample"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_root")
+Sample = ExtResource("2_sample")

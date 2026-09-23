@@ -1,0 +1,18 @@
+<!--
+  Stands in for a module/package whose sources live outside the Godot project
+  directory, so its [GlobalClass] types are reached through csharp:// paths.
+-->
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <GodotProjectDir>$([MSBuild]::EnsureTrailingSlash($([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\Game'))))</GodotProjectDir>
+        <DefineConstants>GODOT;TOOLS;$(DefineConstants)</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CrackTower.Godot.Sharp" Version="4.7.2.2" />
+        <PackageReference Include="CrackTower.Godot.SourceGenerators" Version="4.7.2.2"
+            OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+<Project Sdk="CrackTower.Godot.NET.Sdk/4.7.2.2">
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+        <RootNamespace>TypedArrayBugMRP</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Scripts come from an assembly whose sources live outside res://. -->
+        <ProjectReference Include="..\Libs\TypedArrayBug.Lib\TypedArrayBug.Lib.csproj" />
+    </ItemGroup>
+</Project>

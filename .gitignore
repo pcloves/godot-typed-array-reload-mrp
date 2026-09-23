@@ -1,0 +1,11 @@
+# Godot editor cache
+.godot/
+
+# .NET build output
+bin/
+obj/
+*.user
+
+# Project files rewritten by the editor when the SDK version differs
+*.old
+*.old.*
