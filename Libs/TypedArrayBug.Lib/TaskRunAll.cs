@@ -8,6 +8,10 @@ namespace TypedArrayBug.Lib;
 [GlobalClass]
 public partial class TaskRunAll : TaskBase
 {
+    // Non-empty initializer: pulls TaskPrint into the cold-start load set, so its
+    // script stays bridged and a reload leaves it invalidated. This type is live in
+    // the scene, so a reload does not reconstruct it; TaskRunSerial carries the same
+    // initializer shape into the reload window.
     [Export]
-    public Godot.Collections.Array<TaskBase> Steps { get; set; } = [];
+    public Godot.Collections.Array<TaskBase> Steps { get; set; } = [new TaskPrint()];
 }
